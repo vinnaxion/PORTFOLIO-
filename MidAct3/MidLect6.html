@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm: Lecture 6</title>
+
+    <style>
+
+        /* Pikachu */
+        .first_image {
+            border: 2px solid black;
+            height: 400px;
+            width: 400px;
+        }
+        
+        .first_image img {
+            height: 400px;
+            width: 400px;
+        } 
+
+        /* Charmander */
+        .second_image {
+            border: 2px solid black;
+            height: 5in;
+            width: 5in;
+        }
+
+        .second_image img {
+            height: 5in;
+            width: 5in;
+        }
+
+        /* Bulbasaur */
+        .third_image {
+            border: 2px solid black;
+            border-radius: 50px;
+            height: 400px;
+            width: 400px;
+        }
+
+        .third_image img {
+            height: 400px;
+            width: 400px;
+        }
+
+        /* Squirtle */
+        .fourth_image {
+            border: 2px solid black;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            height: 400px;
+            width: 400px;
+        }
+
+        .fourth_image img {
+            height: 400px;
+            width: 400px;
+        }
+
+        /* UE */
+        .fifth_image {
+            border: 2px solid black;
+            height: 400px;
+            width: 400px;
+        }
+        
+        .fifth_image img {
+            height: 400px;
+            width: 400px;
+        } 
+        
+        /* Froakie */
+        .sixth_image {
+            border: 2px solid black;
+            height: 400px;
+            width: 600px;
+        }
+        
+        .sixth_image img {
+            height: 400px;
+            width: 400px;
+        } 
+
+        .float_left {
+            float: left;
+        }
+
+        /* Vaporeon */
+        .seventh_image {
+            border: 2px solid black;
+            height: 400px;
+            width: 600px;
+        }
+        .seventh_image img {
+            height: 400px;
+            width: 400px;
+            transition: 0.3s;
+        }
+        .seventh_image img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        /* Umbreon */
+
+        .eighth_image {
+            border: 2px solid black;
+            box-shadow: 10px 10px rgb(121, 209, 248);
+            height: 400px;
+            width: 600px;
+        }
+        
+        .eighth_image img {
+            height: 390px;
+            width: 400px;
+        } 
+
+        .float_left {
+            float: left;
+        }
+
+        .float_right {
+            float: right;
+        }
+        /* Galarian Ponyta */
+        .ninth_image {
+            width: 600px;
+            height: 400px;
+        }
+
+        .circle_shape {
+            float: left;
+            shape-outside: circle(45%);
+            clip-path: circle(45%);
+            width: 60px;
+            height: 250px;
+            margin: 10px;
+        }
+
+        /* Sylveon */
+        .tenth_image {
+            width: 600px;
+            height: 400px;
+        }
+
+        .ellipse_shape {
+            float: left;
+            shape-outside: ellipse(40% 45%);
+            clip-path: ellipse(40% 47%);
+            width: 400px;
+            height: 400px;
+            margin: 20px;
+        }
+        /* Name Mask Image */
+        .cervin_mask_image {
+            width: 600px;
+            height: 400px;
+
+            /* Manila Cathedral */
+            background-image: url("Manila_Cathedral.jpg");
+            background-size: cover;
+            background-position: center;
+
+            /* Cervin */
+            -webkit-mask-image: url("Cervin.png");
+            mask-image: url("Cervin.png");
+
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+
+            -webkit-mask-position: center;
+            mask-position: center;
+
+            -webkit-mask-size: contain;
+            mask-size: contain;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <hr>
+    <h1>Midterm Lecture 6 - Image Maps</h1> <hr>
+    
+    <h3> 1. Present an image with 2px borders with an alternative text. </h3> 
+    <div class="first_image">
+        <img src="https://oyster.ignimgs.com/mediawiki/apis.ign.com/pokemon-sun-pokemon-moon/6/6d/Partnercappikachu.jpg" 
+            alt="Pikachu wearing cap">
+    </div> 
+
+    <h3> 2. Present an image with a definite size (5x5"). </h3>
+    <div class="second_image">
+        <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/004.png">
+
+    <h3> 3. Present an image with rounded borders. </h3> 
+    <div class="third_image">
+        <img src="https://ph.portal-pokemon.com/play/resources/pokedex/img/pm/cf47f9fac4ed3037ff2a8ea83204e32aff8fb5f3.png">
+    </div>
+
+    <h3> 4. Present an image with rounded borders. This time, only the top left and lower right corners are rounded. </h3>
+    <div class="fourth_image">
+        <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/007.png">
+    </div>
+
+    <h3> 5. Present an image that will link me to www.ue.edu.ph </h3>
+    <div class="fifth_image">
+        <a href="https://www.ue.edu.ph">
+            <img src="https://fasiformsystem.com/wp-content/uploads/2020/05/UE-logo.jpg">
+        </a>
+    </div>
+
+    <h3> 6. Present an image with a float application. Specify what you have used.</h3>
+    <div class="sixth_image">
+        <img src="https://static.wikia.nocookie.net/pokemon/images/0/04/0656Froakie.png/revision/latest?cb=20240727203331"
+        class="float_left">
+        <p style="text-align: justify; margin-top: 125px; margin-right: 20px; font-size: 25px;">
+            This is Froakie, a sixth Generation Water-Type Pokemon. Their image is floated to the left.
+        </p>
+    </div> 
+    
+
+    <h3>7. Present an image with a CSS application. Specify the CSS hovering effect that you have used.</h3>
+    <div class="seventh_image">
+        <img src="https://static.wikia.nocookie.net/pokemon/images/6/6d/0134Vaporeon.png/revision/latest/scale-to-width/360?cb=20260203154515" class="float_left">
+           <p style="text-align: justify; margin-top: 115px; margin-right: 20px; font-size: 25px;">
+            This is Vaporeon, a very cute water type evolution of Eevee. I used scale for the transform, and opacity on hover.
+        </p>  
+    </div>
+
+    <h3> 8. Present an image with a CSS application. Specify the CSS box shadow effect that you have used. </h3>
+    <div class="eighth_image">
+        <img src="https://archives.bulbagarden.net/media/upload/thumb/e/e1/0197Umbreon.png/250px-0197Umbreon.png" class="float_right">
+            <p style="text-align: justify; margin-top: 125px; margin-right: 20px; font-size: 25px;">
+                This is Umbreon an example of a Dark-Type Pokemon. Their image is floated to the right  and has a strong drop shadow in its container.
+            </p>
+    </div>
+     <br> <br>
+
+    <h3> 9. Present an image with a shape-outside application. Specify the CSS shape function that you have used. </h3>
+    <div class="ninth_image">
+        <img src="https://static0.thegamerimages.com/wordpress/wp-content/uploads/2021/01/Galarian-Ponyta-TCG-Art.jpg?q=50&fit=crop&w=825&dpr=1.5" class="circle_shape">
+        <p style="margin-top: 30px; margin-right: 5px; font-size: 25px; ">
+            This is Galarian Ponyta, a Psychic-type Pokemon. I used the CSS shape function circle together with shape-outside and clip-path so the text wraps around the circular image. Ponyta is very cute and whimsical.
+        </p>
+    </div>
+
+    <br><br><br><br><br><br>
+
+    <h3> 10. Present an image with a shape-outside application. Specify the CSS shape function that you have used. </h3>
+    <div class="tenth_image">
+        <img src="https://wallpapers.com/images/featured/sylveon-pictures-0zf3dehv227oe26f.jpg" class="ellipse_shape">
+        <p style=" margin-top: 10px; margin-right: 20px; font-size: 25px;">
+            This is Sylveon, a Fairy-type evolution of Eevee. 
+            I used the CSS shape function ellipse with shape-outside 
+            and clip-path to create an oval wrapping effect. Sylveon is so charming and adorable!
+        </p>
+    </div>
+
+    <br><br><br><br><br><br><br>
+
+
+    <h3> 11. Present an image with the mask-image property, use your name and your favorite place picture for this example. </h3>
+        <p> Note: The image should be visible in VS Code using Live Preview. </p>
+        <div class="cervin_mask_image">
+        </div>
+        
+    <div style="text-align: center; margin: 2rem 0;">
+        <a href="imagemap.html">
+            <button style="padding: 30px; font-size: 1.2rem; cursor: pointer; background: #00d3ef; border: 2px solid #0076ed; border-radius: 5px; color: #000; font-weight: bold;">
+                Go to Image Map
+            </button>
+        </a>
+    </div>
+        
+</body>
+</html>

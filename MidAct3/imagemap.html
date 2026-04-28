@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Maps</title>
+
+    <style>
+
+        .shapes {
+            background-color: #ede8ee;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            border: 2px solid black;
+        }
+
+        .pokemon_items {
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            border: 2px solid black;
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <h2> 12. Create your image map. (If you want, you can use an image with a circle, rectangle, and triangle in it.) </h2>
+
+    <h2>  Click on one of the shapes for more details. </h2>
+
+    <div class="shapes">
+
+       <img src="shapes.png" usemap="#shape-map">
+
+        <map name="shape-map">
+            <area target="" alt="Triangle" title="Triangle" href="triangle.html" coords="93,34,35,139,151,137" shape="poly">
+            <area target="" alt="Circle" title="Circle" href="circle.html" coords="236,91,59" shape="circle">
+            <area target="" alt="Hexagon" title="Hexagon" href="hexagon.html" coords="360,32,423,32,454,86,423,138,360,138,329,85" shape="poly">
+        </map>
+
+    </div> <br> <br>
+
+
+    <h2> 13. Create your image map with 2 links inside. </h2>
+    
+    <h2>  Click on one of the Pokemon items for more details. </h2>
+
+
+    <div class="pokemon_items">
+    <img src="pokemon_items.png" usemap="#items-map" >
+
+        <map name="items-map">
+  
+            <area target="" alt="PokeBall" title="PokeBall" href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9_Ball" coords="137,119,73" shape="circle">
+            <area target="" alt="Potion" title="Potion" href="https://bulbapedia.bulbagarden.net/wiki/Potion" 
+            coords="308,187,301,175,302,161,309,152,303,137,306,122,313,108,304,94,303,79,309,68,316,57,328,52,340,52,
+            351,53,361,55,370,59,378,65,383,73,382,82,375,93,375,100,380,108,384,115,385,123,382,133,379,141,387,149,394,
+            157,398,165,399,175,396,184,389,188,378,192,368,194,351,196,338,196,319,192" shape="poly">
+        </map>
+
+    </div>
+
+</body>
+
+</html>
