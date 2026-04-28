@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervin's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: 
+                radial-gradient(ellipse at 10% 5%, rgba(13, 213, 235, 0.838) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 80%, rgba(58, 147, 255, 0.282) 0%, transparent 55%),
+                linear-gradient(180deg, #02030b 0%, #050d1a 50%, #0a1125 100%);
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .banner_header {
+            padding: 2rem 5%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+        .profile-avatar {
+            width: 160px;
+            border-radius: 50%;
+            box-shadow: 0 0 18px #00fbff;
+        }
+        .profile-info h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .surname {
+            color: #00ffff;
+        }
+        .profile-info p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+       
+        .tabs_header {
+            width: 100%;
+            border-top: 1px solid #00ffff44;
+            border-bottom: 1px solid #00ffff44;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(0, 76, 157, 0.266);
+            backdrop-filter: blur(12px);
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            font-size: 1.9rem;
+        }
+        .tab_link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+        .tab_link.active, .tab_link:hover {
+            text-shadow: 0 0 10px #00ffff;
+            color: #00ffff;
+        }
+        .laman {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 5%;
+        }
+        .activity-section {
+            margin-bottom: 8rem;
+            scroll-margin-top: 8rem;
+        }
+        .activity-section h2 {
+            text-align: center;
+            color: #00ffff;
+            font-size: 1.7rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #00ffff33;
+            padding-bottom: 0.5rem;
+        }
+        .activity-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2.5rem;
+        }
+        .activity-list li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            min-height: 220px;
+            border: 1px solid #00ffff22;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .activity-list li:hover {
+            border-color: #00ffff66;
+            box-shadow: 0 0 20px rgba(0,255,255,0.15);
+        }
+        .folder-icon {
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+        }
+        .activity-list a {
+            color: white;
+            font-size: 0.9rem;
+            text-decoration: none;
+            text-align: center;
+            line-height: 1.0;
+            transition: color 0.3s ease;
+        }
+        .activity-list a:hover {
+            color: #00ffff;
+        }
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            opacity: 0.7;
+            border-top: 1px solid #00ffff22;
+        }
+    </style>
+</head>
+<body id="top">
+    
+    <header class="banner_header">
+        <div class="logo_header">
+            <img src="MyAvatar.jpg" alt="My Avatar" class="profile-avatar">
+        </div>
+        <div class="profile-info">
+            <h1>Cervin John R. <span class="surname">Coronacion</span></h1>
+            <p>ITDD</p>
+        </div>
+    </header>
+
+    <div class="tabs_header" id="top">
+        <nav class="tabs">
+            <a href="#top" class="tab_link">Menu</a>
+            <a href="#lectures" class="tab_link">Lectures</a>
+            <a href="#prelims" class="tab_link">Prelims</a>
+            <a href="#midterms" class="tab_link">Midterms</a>
+            <a href="#finals" class="tab_link">Finals</a>
+        </nav>
+    </div>
+
+    <main class="laman">
+        <section id="lectures" class="activity-section">
+            <h2>LECTURES</h2>
+            <ul class="activity-list">
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="Prelim_Activity1.pdf">Lecture 1: Intro to Web Design and Components</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="Lect2.html">Lecture 2: HTML Structures</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="Lect3.html">Lecture 3: Tables</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="Lect4.html">Lecture 4: Lists, Links, and Images</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="Lect5.html">Lecture 5: CSS</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="Lect6.html">Lecture 6: Multimedia and Forms</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="Lect7.pdf">Lecture 7: Bootstrap</a></li>
+            </ul>
+        </section>
+
+        <section id="prelims" class="activity-section">
+            <h2>PRELIMS</h2>
+            <ul class="activity-list">
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="Developers_Page.html">Web Developer's Page</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="PreQuiz1.html">Tables with Images (Favorite Place)</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="PRELIM  EXAM/Index_Page.html">Furniture Sale</a></li>
+            </ul>
+        </section>
+
+        <section id="midterms" class="activity-section">
+            <h2>MIDTERMS</h2>
+            <ul class="activity-list">
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="MidAct1.html">Lists - Table of Contents</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="MidAct3/MidLect6.html">Image and Image Mapping</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="MenuExam.html">Menu Page for Restaurant</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="MidExam/MidtermExam.html">Informative Page</a></li>
+            </ul>
+        </section>
+
+        <section id="finals" class="activity-section">
+            <h2>FINALS</h2>
+            <ul class="activity-list">
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="FinAct2.html">Admission Form</a></li>
+                <li><img src="Avatar The Way Of Water Folder Icon V2.png" alt="Folder" class="folder-icon"><a href="bayan-iki-proposal.html">Project Proposal: Bayan-iki</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Coronacion CIP Portfolio</p>
+    </footer>
+</body>
+</html>

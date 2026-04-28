@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <title>Lecture 5</title>
+        <style>
+            body {
+                background-color: #0a1a2e;
+                color: white;
+                font-family: Arial, sans-serif;
+            }
+
+            h2 {
+                text-align: center;
+                color: #00cfdd;
+            }
+
+            h3, h4 {
+                color: #7ee8f0;
+            }
+
+            p {
+                color: white;
+            }
+
+            #para1 {
+                text-align: center;
+                color: #00cfdd;
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .center {
+                text-align: center;
+                color: #7ee8f0;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <hr size="2" color="#00cfdd">
+        <h2>Lecture 5 – Cascading Style Sheets (CSS)</h2>
+        <hr size="2" color="#00cfdd">
+
+        <p id="para1">This paragraph is styled using an ID selector.</p>
+        <p class="center">This paragraph is styled using a class selector.</p>
+        <h2 class="center">This heading is also styled using the same class.</h2>
+
+        <h3>What is CSS?</h3>
+        <p>
+            CSS stands for Cascading Style Sheets. It is used to control the
+            appearance and layout of HTML elements on a web page.
+        </p>
+
+        <h3>Types of CSS</h3>
+        <h4>1. Inline CSS</h4>
+        <p>Applied directly to an HTML element using the style attribute.</p>
+
+        <h4>2. Internal CSS</h4>
+        <p>Written inside a &lt;style&gt; tag in the &lt;head&gt; section of the HTML file.</p>
+
+        <h4>3. External CSS</h4>
+        <p>Written in a separate .css file and linked using the &lt;link&gt; tag.</p>
+
+        <h3>CSS Selectors</h3>
+        <h4>Element Selector</h4>
+        <p>Targets all elements of a specific type. Example: p { color: red; }</p>
+
+        <h4>Class Selector</h4>
+        <p>Targets elements with a specific class. Example: .center { text-align: center; }</p>
+
+        <h4>ID Selector</h4>
+        <p>Targets a single element with a specific id. Example: #para1 { font-weight: bold; }</p>
+
+        <br>
+
+        <h1 style="background-color: #00cfdd;">Background Color Property</h1>
+        <h1 style="color: #00cfdd;">Color Property</h1>
+        <h1 style="border: 2px solid #00cfdd;">Border Property</h1>
+
+    </body>
+</html>

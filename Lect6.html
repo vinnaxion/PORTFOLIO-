@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lecture 6</title>
+        <style>
+            body {
+                background-color: #0a1a2e;
+                color: white;
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                color: #00cfdd;
+                text-align: center;
+            }
+
+            h2 {
+                color: #7ee8f0;
+            }
+
+            p {
+                color: white;
+            }
+
+            input, select, textarea {
+                background-color: #0f2540;
+                color: white;
+                border: 1px solid #00cfdd;
+                padding: 4px;
+                margin: 2px 0;
+                width: 250px;
+            }
+
+            input[type="radio"],
+            input[type="checkbox"] {
+                width: auto;
+                margin: 0 4px 0 0;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                background-color: #00cfdd;
+                color: #0a1a2e;
+                font-weight: bold;
+                cursor: pointer;
+                width: auto;
+                padding: 6px 16px;
+                margin-right: 6px;
+            }
+
+            input[type="submit"]:hover,
+            input[type="reset"]:hover {
+                background-color: #7ee8f0;
+            }
+
+            label {
+                color: #7ee8f0;
+            }
+
+            .form-row {
+                margin-bottom: 6px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <hr size="2" color="#00cfdd">
+        <h1>Lecture 6 – Multimedia and Forms</h1>
+        <hr size="2" color="#00cfdd">
+
+        <h2>Multimedia in HTML</h2>
+        <p>HTML supports multimedia elements like audio and video using built-in tags.</p>
+
+        <h2>Audio Example</h2>
+        <p>The &lt;audio&gt; tag is used to embed sound in a web page.</p>
+        <audio controls>
+            <source src="yung kai - blue (official music video).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h2>Video Example</h2>
+        <p>The &lt;video&gt; tag is used to embed video in a web page.</p>
+        <video width="400" controls>
+            <source src="YTDown.com_YouTube_Learning-To-Dive-Scene-AVATAR-THE-WAY-OF_Media_iDkCBPckHmQ_001_1080p.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+
+        <h2>Embedded YouTube Video (iframe)</h2>
+        <p>The &lt;iframe&gt; tag can embed external content like YouTube videos.</p>
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/iDkCBPckHmQ?si=f-74eJLLLkr0yK2a"
+            title="Avatar: The Way of Water Trailer"
+            allowfullscreen>
+        </iframe>
+
+        <hr size="2" color="#00cfdd">
+
+        
+        <h2>HTML Forms</h2>
+        <p>Forms are used to collect input from users. They use the &lt;form&gt; tag.</p>
+
+        <h2>Sample Registration Form</h2>
+        <form>
+            <div class="form-row">
+                <label>First Name:</label><br>
+                <input type="text" placeholder="Enter first name">
+            </div>
+            <div class="form-row">
+                <label>Last Name:</label><br>
+                <input type="text" placeholder="Enter last name">
+            </div>
+            <div class="form-row">
+                <label>Email:</label><br>
+                <input type="email" placeholder="Enter email">
+            </div>
+            <div class="form-row">
+                <label>Password:</label><br>
+                <input type="password" placeholder="Enter password">
+            </div>
+            <div class="form-row">
+                <label>Birthday:</label><br>
+                <input type="date">
+            </div>
+            <div class="form-row">
+                <label>Gender:</label><br>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+            </div>
+            <div class="form-row">
+                <label>Hobbies:</label><br>
+                <input type="checkbox" name="hobby" value="reading"> Reading
+                <input type="checkbox" name="hobby" value="gaming"> Gaming
+                <input type="checkbox" name="hobby" value="coding"> Coding
+            </div>
+            <div class="form-row">
+                <label>Course:</label><br>
+                <select>
+                    <option>BSIT</option>
+                    <option>BSCS</option>
+                    <option>BSIS</option>
+                    <option>BSCE</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label>Message:</label><br>
+                <textarea rows="3" placeholder="Type your message here..."></textarea>
+            </div>
+            <div class="form-row">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+
+    </body>
+</html>

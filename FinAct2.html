@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Data Sheet - Sample University</title>
+        
+        <style>  
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+       body {
+            background: url("https://varsitarian.net/wp-content/uploads/2024/10/462539597_493856023615541_4655314963492911222_n.png") no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #1A1A1A;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .page-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .form-document {
+            background: #FFFFFF;
+            box-shadow: 0 0 0 6px #F5A800,
+                        0 0 0 10px #1A1A1A,
+                        0 30px 80px rgba(0,0,0,0.6);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .form-header {
+            background: #111111;
+            padding: 28px 40px 24px;
+            display: grid;
+            grid-template-columns: 90px 1fr 160px;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 5px solid #F5A800;
+            position: relative;
+        }
+
+        .form-header::after {
+            content: '';
+            position: absolute;
+            bottom: -9px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #1A1A1A;
+        }
+
+        .logo-circle {
+            width: 80px;
+            height: 80px;
+            border: 3px solid #F5A800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-circle span {
+            color: #F5A800;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .header-center {
+            text-align: center;
+        }
+
+        .university-name {
+            color: #F5A800;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .enrollment-system {
+            font-size: 11px;
+            color: #AAA;
+            margin-top: 2px;
+        }
+
+        .form-title {
+            color: #FFFFFF;
+            font-size: 24px;
+            margin-top: 8px;
+        }
+
+        .form-subtitle {
+            color: #F5A800;
+            font-size: 11px;
+            margin-top: 3px;
+            font-style: italic;
+        }
+
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .header-field label {
+            font-size: 10px;
+            color: #AAA;
+            text-transform: uppercase;
+        }
+
+        .header-field input,
+        .header-field select {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #F5A800;
+            color:#C98A00;
+            padding: 4px 0;
+            width: 100%;
+            outline: none;
+        }
+
+        .name-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #F5A800;
+        }
+
+        .name-bar-cell {
+            padding: 6px 12px;
+            border-right: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .name-bar-cell:last-child {
+            border-right: none;
+        }
+
+        .name-bar-cell label {
+            font-size: 9px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .name-bar-cell input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+            background: transparent;
+            padding: 3px 0;
+        }
+
+        .section {
+            border-bottom: 1px solid #E0D5A0;
+        }
+
+        .section-header {
+            background: #111111;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-header h2 {
+            color: #F5A800;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-content {
+            background: #FDFAF2;
+            padding: 16px 20px;
+        }
+
+        .field-row {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .col-1 { grid-template-columns: 1fr; }
+        .col-2 { grid-template-columns: 1fr 1fr; }
+        .col-3 { grid-template-columns: repeat(3, 1fr); }
+        .col-4 { grid-template-columns: repeat(4, 1fr); }
+
+        .field-group label {
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #6B6020;
+        }
+
+        .field-group input,
+        .field-group select,
+        .field-group textarea {
+            width: 100%;
+            padding: 7px 10px;
+            border: 1px solid #D4C870;
+            background: #FFFEF7;
+            font-size: 13px;
+            outline: none;
+        }
+
+        .field-group input:focus,
+        .field-group select:focus,
+        .field-group textarea:focus {
+            border-color: #F5A800;
+        }
+
+        .radio-option {
+            display: flex;
+            gap: 8px;
+            margin: 5px 0;
+        }
+
+        .radio-option input {
+            accent-color: #F5A800;
+        }
+
+        .submit-section {
+            background: #111111;
+            padding: 24px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .submit-note {
+            color: #888;
+            font-size: 11px;
+            max-width: 400px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-reset {
+            border: 2px solid #555;
+            background: transparent;
+            color: #AAA;
+            padding: 10px 25px;
+        }
+
+        .btn-submit {
+            border: 2px solid #F5A800;
+            background: #F5A800;
+            color: #1A1A1A;
+            padding: 10px 30px;
+        }
+
+        .btn-submit:hover {
+            background: #C98A00;
+            border-color: #C98A00;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <div class="form-document">
+
+                <header class="form-header">
+                    <div class="logo-circle">
+                        <span>LOGO</span>
+                    </div>
+                    <div class="header-center">
+                        <div class="university-name">Sample University</div>
+                        <div class="enrollment-system">Enrollment System</div>
+                        <div class="form-title">Personal Data Sheet</div>
+                        <div class="form-subtitle">Graduate School, Law, Medicine</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-field">
+                            <label for="program">Program</label>
+                            <select id="program" name="program">
+                                <option value="" disabled selected>Select Program</option>
+                                <optgroup label="Graduate School - Master's">
+                                    <option>Master of Arts in Education</option>
+                                    <option>Master of Arts in Philosophy</option>
+                                    <option>Master of Arts in History</option>
+                                    <option>Master of Arts in Literature</option>
+                                    <option>Master of Science in Biology</option>
+                                    <option>Master of Science in Chemistry</option>
+                                    <option>Master of Science in Physics</option>
+                                    <option>Master of Science in Mathematics</option>
+                                    <option>Master of Science in Computer Science</option>
+                                    <option>Master of Science in Nursing</option>
+                                    <option>Master of Business Administration</option>
+                                    <option>Master of Public Administration</option>
+                                    <option>Master of Engineering</option>
+                                    <option>Master of Fine Arts</option>
+                                    <option>Master of Music</option>
+                                    <option>Master of Social Work</option>
+                                    <option>Master of Public Health</option>
+                                    <option>Master of Theology</option>
+                                </optgroup>
+                                <optgroup label="Graduate School - Doctoral">
+                                    <option>Doctor of Philosophy in Education</option>
+                                    <option>Doctor of Philosophy in Philosophy</option>
+                                    <option>Doctor of Philosophy in Biology</option>
+                                    <option>Doctor of Philosophy in Chemistry</option>
+                                    <option>Doctor of Philosophy in Physics</option>
+                                    <option>Doctor of Philosophy in Mathematics</option>
+                                    <option>Doctor of Philosophy in Computer Science</option>
+                                    <option>Doctor of Philosophy in History</option>
+                                    <option>Doctor of Philosophy in Literature</option>
+                                    <option>Doctor of Public Administration</option>
+                                    <option>Doctor of Business Administration</option>
+                                </optgroup>
+                                <optgroup label="Law">
+                                    <option>Juris Doctor</option>
+                                    <option>Master of Laws (LLM)</option>
+                                </optgroup>
+                                <optgroup label="Medicine">
+                                    <option>Doctor of Medicine</option>
+                                    <option>Doctor of Dental Medicine</option>
+                                    <option>Doctor of Optometry</option>
+                                    <option>Master of Science in Medicine</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="header-field">
+                            <label for="student_no">Student #</label>
+                            <input type="text" id="student_no" name="student_no" placeholder="e.g. 2026-00001">
+                        </div>
+                    </div>
+                </header>
+
+                <div class="name-bar">
+                    <div class="name-bar-cell">
+                        <label for="surname">Surname</label>
+                        <input type="text" id="surname" name="surname" placeholder="Last name" autocomplete="family-name">
+                    </div>
+                    <div class="name-bar-cell">
+                        <label for="given_name">Given Name</label>
+                        <input type="text" id="given_name" name="given_name" placeholder="First name" autocomplete="given-name">
+                    </div>
+                    <div class="name-bar-cell">
+                        <label for="middle_name">Middle Name</label>
+                        <input type="text" id="middle_name" name="middle_name" placeholder="Middle name" autocomplete="additional-name">
+                    </div>
+                    <div class="name-bar-cell">
+                        <label for="aux_name">Auxiliary Name</label>
+                        <input type="text" id="aux_name" name="aux_name" placeholder="e.g. Jr., III">
+                    </div>
+                </div>
+
+                <div class="form-body">
+
+                    <div class="section">
+                        <div class="section-header">
+                            <h2>Student Details</h2>
+                            <div class="accent-line"></div>
+                        </div>
+                        <div class="section-content">
+
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="city_address">City Address</label>
+                                    <input type="text" id="city_address" name="city_address" placeholder="House/Unit No., Street, Barangay, City/Municipality">
+                                </div>
+                            </div>
+
+                            <div class="field-row col-1-1-2">
+                                <div class="field-group">
+                                    <label for="city_zip">Zip Code</label>
+                                    <input type="text" id="city_zip" name="city_zip" placeholder="e.g. 1008" maxlength="4" pattern="[0-9]{4}">
+                                </div>
+                                <div class="field-group">
+                                    <label for="tel_no">Tel. No.</label>
+                                    <input type="tel" id="tel_no" name="tel_no" placeholder="e.g. (02) 8123-4567">
+                                </div>
+                                <div class="field-group">
+                                    <label for="email">E-mail Address</label>
+                                    <input type="email" id="email" name="email" placeholder="e.g. juan.delacruz@email.com" autocomplete="email">
+                                </div>
+                            </div>
+
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="home_address">Home Address</label>
+                                    <input type="text" id="home_address" name="home_address" placeholder="Permanent home address (if different from city address)">
+                                </div>
+                            </div>
+
+                            <div class="field-row col-2">
+                                <div class="field-group">
+                                    <label for="home_zip">Zip Code</label>
+                                    <input type="text" id="home_zip" name="home_zip" placeholder="e.g. 1008" maxlength="4" pattern="[0-9]{4}">
+                                </div>
+                                <div class="field-group">
+                                    <label for="region">Region</label>
+                                    <select id="region" name="region">
+                                        <option value="" disabled selected>Select region</option>
+                                        <option>NCR – National Capital Region</option>
+                                        <option>CAR – Cordillera Administrative Region</option>
+                                        <option>Region I – Ilocos Region</option>
+                                        <option>Region II – Cagayan Valley</option>
+                                        <option>Region III – Central Luzon</option>
+                                        <option>Region IV-A – CALABARZON</option>
+                                        <option>Region IV-B – MIMAROPA</option>
+                                        <option>Region V – Bicol Region</option>
+                                        <option>Region VI – Western Visayas</option>
+                                        <option>Region VII – Central Visayas</option>
+                                        <option>Region VIII – Eastern Visayas</option>
+                                        <option>Region IX – Zamboanga Peninsula</option>
+                                        <option>Region X – Northern Mindanao</option>
+                                        <option>Region XI – Davao Region</option>
+                                        <option>Region XII – SOCCSKSARGEN</option>
+                                        <option>Region XIII – Caraga</option>
+                                        <option>BARMM – Bangsamoro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="field-row col-2">
+                                <div class="field-group">
+                                    <label for="birthday">Birthday</label>
+                                    <input type="date" id="birthday" name="birthday">
+                                </div>
+                                <div class="field-group">
+                                    <label for="age">Age</label>
+                                    <input type="number" id="age" name="age" placeholder="e.g. 22" min="16" max="100">
+                                </div>
+                            </div>
+
+                            <div class="field-row col-2">
+                                <div class="field-group">
+                                    <label for="birthplace">Birthplace</label>
+                                    <input type="text" id="birthplace" name="birthplace" placeholder="City/Municipality, Province">
+                                </div>
+                                <div class="field-group">
+                                    <label for="religion">Religion</label>
+                                    <select id="religion" name="religion">
+                                        <option value="" disabled selected>Select religion</option>
+                                        <option>Roman Catholic</option>
+                                        <option>Islam</option>
+                                        <option>Iglesia ni Cristo</option>
+                                        <option>Aglipayan / Philippine Independent Church</option>
+                                        <option>Born-Again Christian / Evangelical</option>
+                                        <option>Baptist</option>
+                                        <option>Seventh-Day Adventist</option>
+                                        <option>Latter-Day Saints (Mormon)</option>
+                                        <option>Jehovah's Witness</option>
+                                        <option>Buddhism</option>
+                                        <option>Hinduism</option>
+                                        <option>Other</option>
+                                        <option>None / No Religion</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="field-row col-2">
+                                <div class="field-group">
+                                    <label for="citizenship">Citizenship</label>
+                                    <select id="citizenship" name="citizenship">
+                                        <option value="" disabled selected>Select citizenship</option>
+                                        <option>Filipino</option>
+                                        <option>Dual Citizen (Filipino &amp; other)</option>
+                                        <option>American</option>
+                                        <option>Chinese</option>
+                                        <option>Japanese</option>
+                                        <option>Korean</option>
+                                        <option>Indian</option>
+                                        <option>Other Foreign National</option>
+                                    </select>
+                                </div>
+                                <div class="field-group">
+                                    <label for="sex">Sex</label>
+                                    <select id="sex" name="sex">
+                                        <option value="" disabled selected>Select sex</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="field-row col-2-1" style="align-items:end;">
+                                <div class="field-group">
+                                    <label for="acr">If Alien, ACR # <em style="font-style:italic;font-weight:400;">(see Registrar)</em></label>
+                                    <input type="text" id="acr" name="acr" placeholder="Alien Certificate of Registration number">
+                                </div>
+                            </div>
+
+                            <hr class="divider">
+
+                            <div class="field-row col-2" style="align-items:start;">
+                                <div>
+                                    <div class="radio-group">
+                                        <label>Legal Status</label>
+                                        <div class="radio-options">
+                                            <label class="radio-option">
+                                                <input type="radio" name="legal_status" value="citizen_rp">
+                                                <span>Citizen of RP</span>
+                                            </label>
+                                            <label class="radio-option">
+                                                <input type="radio" name="legal_status" value="permanent_resident">
+                                                <span>Permanent Resident</span>
+                                            </label>
+                                            <label class="radio-option">
+                                                <input type="radio" name="legal_status" value="student_visa">
+                                                <span>Person granted permission to enter and remain as a student in RP on a visa for a defined period of time</span>
+                                            </label>
+                                            <label class="radio-option">
+                                                <input type="radio" name="legal_status" value="dependent_visa">
+                                                <span>Person granted permission to enter and remain as a child or spouse of a worker on a visa for a defined period of time</span>
+                                            </label>
+                                            <label class="radio-option">
+                                                <input type="radio" name="legal_status" value="other_visa">
+                                                <span>Other visa</span>
+                                            </label>
+                                            <label class="radio-option">
+                                                <input type="radio" name="legal_status" value="legal_status_not_known">
+                                                <span>Legal status not known</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="radio-group">
+                                        <label>Civil Status</label>
+                                        <div class="radio-options">
+                                            <label class="radio-option">
+                                                <input type="radio" name="civil_status" value="single">
+                                                <span>Single</span>
+                                            </label>
+                                            <label class="radio-option">
+                                                <input type="radio" name="civil_status" value="married">
+                                                <span>Married</span>
+                                            </label>
+                                            <label class="radio-option">
+                                                <input type="radio" name="civil_status" value="divorced">
+                                                <span>Divorced</span>
+                                            </label>
+                                            <label class="radio-option">
+                                                <input type="radio" name="civil_status" value="widowed">
+                                                <span>Widowed</span>
+                                            </label>
+                                            <label class="radio-option">
+                                                <input type="radio" name="civil_status" value="separated">
+                                                <span>Separated</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <hr class="divider">
+
+                                    <div class="radio-group">
+                                        <label>Employment Status</label>
+                                        <div class="radio-options horizontal">
+                                            <label class="radio-option">
+                                                <input type="radio" name="employment" value="working">
+                                                <span>Working</span>
+                                            </label>
+                                            <label class="radio-option">
+                                                <input type="radio" name="employment" value="not_working">
+                                                <span>Not working</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="inline-fields">
+                                        <div class="field-group">
+                                            <label for="office_bus_tel">If Working: Office/Bus. Tel. #</label>
+                                            <input type="tel" id="office_bus_tel" name="office_bus_tel" placeholder="e.g. (02) 8123-4567">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="two-col-header">
+                        <div class="col-label">
+                            <h2>Father's Information</h2>
+                            <div class="accent-line"></div>
+                        </div>
+                        
+                            <div class="accent-line" style="flex:1;height:1px;background:linear-gradient(to right,var(--gold),transparent);"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="two-col-section">
+                        <div class="col-panel">
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="father_surname">Surname</label>
+                                    <input type="text" id="father_surname" name="father_surname" placeholder="Father's last name">
+                                </div>
+                            </div>
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="father_firstname">First Name</label>
+                                    <input type="text" id="father_firstname" name="father_firstname" placeholder="Father's first name">
+                                </div>
+                            </div>
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="father_middlename">Middle Name</label>
+                                    <input type="text" id="father_middlename" name="father_middlename" placeholder="Father's middle name">
+                                </div>
+                            </div>
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="father_auxname">Auxiliary Name</label>
+                                    <input type="text" id="father_auxname" name="father_auxname" placeholder="e.g. Jr., Sr., III">
+                                </div>
+                            </div>
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="father_occupation">Occupation / Employment</label>
+                                    <input type="text" id="father_occupation" name="father_occupation" placeholder="e.g. Engineer, Business Owner">
+                                </div>
+                            </div>
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="father_educ">Educational Attainment</label>
+                                    <select id="father_educ" name="father_educ">
+                                        <option value="" disabled selected>Select attainment</option>
+                                        <option>No formal education</option>
+                                        <option>Elementary Level</option>
+                                        <option>Elementary Graduate</option>
+                                        <option>High School Level</option>
+                                        <option>High School Graduate</option>
+                                        <option>Senior High School Graduate</option>
+                                        <option>Vocational / Technical Graduate</option>
+                                        <option>College Level</option>
+                                        <option>College Graduate (Bachelor's Degree)</option>
+                                        <option>Master's Degree Holder</option>
+                                        <option>Doctoral Degree Holder</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-label">
+                            <h2>Mother's Information</h2>
+                            <div class="accent-line"></div>
+                        </div>
+                        <div class="col-panel">
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="mother_surname">Surname</label>
+                                    <input type="text" id="mother_surname" name="mother_surname" placeholder="Mother's last name (maiden)">
+                                </div>
+                            </div>
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="mother_firstname">First Name</label>
+                                    <input type="text" id="mother_firstname" name="mother_firstname" placeholder="Mother's first name">
+                                </div>
+                            </div>
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="mother_middlename">Middle Name</label>
+                                    <input type="text" id="mother_middlename" name="mother_middlename" placeholder="Mother's middle name">
+                                </div>
+                            </div>
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="mother_auxname">Auxiliary Name</label>
+                                    <input type="text" id="mother_auxname" name="mother_auxname" placeholder="e.g. Jr., Sr., III">
+                                </div>
+                            </div>
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="mother_occupation">Occupation / Employment</label>
+                                    <input type="text" id="mother_occupation" name="mother_occupation" placeholder="e.g. Teacher, Homemaker">
+                                </div>
+                            </div>
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="mother_educ">Educational Attainment</label>
+                                    <select id="mother_educ" name="mother_educ">
+                                        <option value="" disabled selected>Select attainment</option>
+                                        <option>No formal education</option>
+                                        <option>Elementary Level</option>
+                                        <option>Elementary Graduate</option>
+                                        <option>High School Level</option>
+                                        <option>High School Graduate</option>
+                                        <option>Senior High School Graduate</option>
+                                        <option>Vocational / Technical Graduate</option>
+                                        <option>College Level</option>
+                                        <option>College Graduate (Bachelor's Degree)</option>
+                                        <option>Master's Degree Holder</option>
+                                        <option>Doctoral Degree Holder</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-content" style="padding-top:8px;padding-bottom:8px;">
+                            <div class="field-row col-1">
+                                <div class="field-group">
+                                    <label for="parents_address">Parent's Address</label>
+                                    <input type="text" id="parents_address" name="parents_address" placeholder="Complete address of parents (if different from student's address)">
+                                </div>
+                            </div>
+                            <div class="field-row col-2">
+                                <div class="field-group">
+                                    <label for="parents_zip">Zip Code</label>
+                                    <input type="text" id="parents_zip" name="parents_zip" placeholder="e.g. 1008" maxlength="4">
+                                </div>
+                                <div class="field-group">
+                                    <label for="parents_tel">Parent's Tel. #</label>
+                                    <input type="tel" id="parents_tel" name="parents_tel" placeholder="e.g. (02) 8123-4567">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="section-header">
+                            <h2>Guardian's Information <span class="if-applicable">(If Applicable)</span></h2>
+                            <div class="accent-line"></div>
+                        </div>
+                        <div class="section-content">
+                            <div class="field-row col-2">
+                                <div>
+                                    <div class="field-row col-1">
+                                        <div class="field-group">
+                                            <label for="guardian_surname">Surname</label>
+                                            <input type="text" id="guardian_surname" name="guardian_surname" placeholder="Guardian's last name">
+                                        </div>
+                                    </div>
+                                    <div class="field-row col-1">
+                                        <div class="field-group">
+                                            <label for="guardian_firstname">First Name</label>
+                                            <input type="text" id="guardian_firstname" name="guardian_firstname" placeholder="Guardian's first name">
+                                        </div>
+                                    </div>
+                                    <div class="field-row col-1">
+                                        <div class="field-group">
+                                            <label for="guardian_middlename">Middle Name</label>
+                                            <input type="text" id="guardian_middlename" name="guardian_middlename" placeholder="Guardian's middle name">
+                                        </div>
+                                    </div>
+                                    <div class="field-row col-1">
+                                        <div class="field-group">
+                                            <label for="guardian_auxname">Auxiliary Name</label>
+                                            <input type="text" id="guardian_auxname" name="guardian_auxname" placeholder="e.g. Jr., Sr., III">
+                                        </div>
+                                    </div>
+                                    <div class="field-row col-1">
+                                        <div class="field-group">
+                                            <label for="guardian_occupation">Occupation / Employment</label>
+                                            <input type="text" id="guardian_occupation" name="guardian_occupation" placeholder="e.g. Lawyer, Retired">
+                                        </div>
+                                    </div>
+                                    <div class="field-row col-1">
+                                        <div class="field-group">
+                                            <label for="guardian_off_tel">Off./Bus. Tel. #</label>
+                                            <input type="tel" id="guardian_off_tel" name="guardian_off_tel" placeholder="e.g. (02) 8123-4567">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="field-row col-1">
+                                        <div class="field-group">
+                                            <label for="guardian_address">Guardian's Address</label>
+                                            <textarea id="guardian_address" name="guardian_address" rows="4" placeholder="House/Unit No., Street, Barangay, City/Municipality, Province"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="field-row col-1">
+                                        <div class="field-group">
+                                            <label for="guardian_zip">Zip Code</label>
+                                            <input type="text" id="guardian_zip" name="guardian_zip" placeholder="e.g. 1008" maxlength="4">
+                                        </div>
+                                    </div>
+                                    <div class="field-row col-1">
+                                        <div class="field-group">
+                                            <label for="guardian_tel">Tel. #</label>
+                                            <input type="tel" id="guardian_tel" name="guardian_tel" placeholder="e.g. (02) 8123-4567">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="submit-section">
+                    <p class="submit-note">I hereby certify that all information provided in this form is true and correct to the best of my knowledge. Any falsification shall be grounds for denial of admission.</p>
+                    <div class="btn-group">
+                        <button type="reset" class="btn-reset" onclick="document.querySelectorAll('input,select,textarea').forEach(el=>{ if(el.type!=='radio'&&el.type!=='checkbox'){el.value='';}else{el.checked=false;} })">Clear Form</button>
+                        <button type="submit" class="btn-submit">Submit Form</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
