@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enneagram Journey Hub</title>
+    <link rel="stylesheet" href="EnneagramDesign.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <span class="nav-logo">Enneagram</span>
+            <ul class="nav-links">
+                <li><a href="#enneagram-section" class="nav-btn active">Enneagram</a></li>
+                <li><a href="#types-section" class="nav-btn">Types</a></li>
+                <li><a href="#celebrities-section" class="nav-btn">Celebrities</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ENNEAGRAM SECTION -->
+    <section id="enneagram-section">
+
+        <div class="enneagram-top">
+            <div class="map-wrapper">
+                <img
+                    src="Enneagram.jpg"
+                    alt="Enneagram Circle - click a section to learn more"
+                    usemap="#image-map"
+                    id="enneagram-img"
+                >
+                <svg class="hover-overlay" viewBox="0 0 960 630" xmlns="http://www.w3.org/2000/svg">
+                    <a href="#type1"><polygon class="hzone" points="619,217,679,177,669,163,658,148,647,136,634,125,620,114,609,106,598,99,584,92,572,86,561,82,534,150,545,155,556,160,567,167,577,173,587,181,596,189,605,200,612,209"><title>The Reformer - Type 1</title></polygon></a>
+                    <a href="#type2"><polygon class="hzone" points="643,327,715,337,716,322,717,305,716,289,715,275,713,261,710,248,706,235,701,220,695,207,690,196,684,187,621,224,627,232,632,244,637,257,640,269,642,281,643,291,644,301,644,313"><title>The Helper - Type 2</title></polygon></a>
+                    <a href="#type3"><polygon class="hzone" points="591,429,641,483,649,474,656,466,663,458,670,449,677,440,683,430,689,420,694,410,698,400,702,389,706,379,709,368,711,358,713,347,641,335,639,346,636,357,633,366,629,375,625,384,620,393,613,403,606,412,598,421"><title>The Achiever - Type 3</title></polygon></a>
+                    <a href="#type4"><polygon class="hzone" points="487,471,490,543,502,543,516,541,529,539,542,536,556,532,568,527,579,522,592,516,602,510,612,504,623,496,633,489,585,432,576,440,567,446,557,452,547,457,536,462,524,465,512,468,499,470"><title>The Individualist - Type 4</title></polygon></a>
+                    <a href="#type5"><polygon class="hzone" points="379,438,335,496,343,501,352,507,362,513,372,519,381,523,393,528,404,532,418,536,432,539,445,542,458,543,469,544,479,544,479,471,468,471,454,469,443,467,429,464,415,459,404,453,391,445"><title>The Investigator - Type 5</title></polygon></a>
+                    <a href="#type6"><polygon class="hzone" points="318,342,247,359,250,372,254,385,259,398,267,413,273,425,280,436,287,446,294,456,304,468,314,479,326,489,374,432,365,425,357,418,350,410,343,401,337,392,331,381,326,369,321,354"><title>The Loyalist - Type 6</title></polygon></a>
+                    <a href="#type7"><polygon class="hzone" points="267,197,332,230,327,242,323,253,319,265,316,276,314,286,314,296,314,306,315,316,315,326,316,335,244,348,242,327,241,312,241,294,242,280,245,262,248,248,252,233,258,217"><title>The Enthusiast - Type 7</title></polygon></a>
+                    <a href="#type8"><polygon class="hzone" points="335,223,272,187,281,174,290,162,300,150,311,138,321,128,333,118,345,109,356,102,367,96,378,90,387,86,416,154,404,159,393,165,381,173,372,181,363,189,355,198,346,209"><title>The Challenger - Type 8</title></polygon></a>
+                    <a href="#type9"><polygon class="hzone" points="396,82,422,151,431,148,441,145,450,143,460,142,471,141,480,141,491,141,501,142,510,144,519,146,529,149,550,78,533,74,514,71,498,69,482,68,464,68,445,70,428,73,409,78"><title>The Peacemaker - Type 9</title></polygon></a>
+                    <a href="#acting-card"><polygon class="hzone" points="227,161,262,182,266,177,271,169,278,159,286,149,294,139,302,131,310,123,320,114,330,106,341,98,352,91,362,86,375,80,387,75,399,70,412,66,423,63,435,61,447,59,459,58,470,57,481,57,491,57,502,58,511,59,521,60,531,62,539,64,549,67,559,70,567,73,577,77,586,81,596,86,606,92,615,97,624,103,633,110,642,117,650,124,657,131,664,139,670,146,678,156,685,165,690,173,726,151,719,141,711,130,702,119,690,106,678,94,667,84,657,76,646,68,634,60,620,51,609,45,596,39,580,33,565,28,549,23,534,20,521,18,507,16,492,15,480,14,468,14,456,15,444,16,431,18,416,21,402,25,387,29,374,34,360,40,347,46,336,52,323,60,312,67,301,75,290,84,280,93,268,105,257,117,244,134,236,146"><title>Acting Center</title></polygon></a>
+                    <a href="#feeling-card"><polygon class="hzone" points="487,594,485,552,496,551,508,550,518,549,528,547,539,544,550,541,561,538,571,534,582,529,591,524,600,519,609,514,617,509,625,503,631,498,639,492,647,485,655,477,661,470,669,461,677,451,683,442,688,434,695,423,701,412,706,401,710,391,714,380,717,369,720,358,722,347,724,335,725,323,725,311,725,297,724,284,723,271,721,259,719,247,716,235,712,224,708,212,703,200,698,190,691,179,728,157,734,168,741,183,748,199,753,214,758,230,762,248,764,261,766,279,767,297,767,315,765,336,763,354,759,371,754,389,748,408,740,425,731,444,720,462,711,476,699,490,688,503,677,514,665,525,651,536,637,546,624,554,608,563,591,571,573,578,554,584,536,589,518,592,504,593"><title>Feeling Center</title></polygon></a>
+                    <a href="#thinking-card"><polygon class="hzone" points="222,170,258,190,254,199,249,209,245,219,241,230,238,240,236,250,234,260,232,271,231,283,230,294,230,305,230,316,230,327,231,337,233,348,236,359,239,370,242,381,245,391,248,401,252,410,257,420,262,428,267,437,273,446,279,455,286,463,293,471,300,479,307,486,315,494,323,501,331,507,339,513,347,518,355,523,364,528,374,533,384,537,394,541,404,544,414,547,425,550,435,552,447,554,458,555,468,556,479,556,479,598,464,597,443,595,427,593,405,588,387,583,367,576,350,568,334,559,317,549,301,537,285,524,271,511,257,495,244,479,233,463,223,445,210,421,202,399,195,375,191,354,188,330,187,310,188,288,189,270,193,252,197,233,202,214,210,193"><title>Thinking Center</title></polygon></a>
+                </svg>
+
+                <map name="image-map">
+                    <area target="_self" alt="Acting Center" title="Acting Center" href="#acting-card" coords="227,161,262,182,266,177,271,169,278,159,286,149,294,139,302,131,310,123,320,114,330,106,341,98,352,91,362,86,375,80,387,75,399,70,412,66,423,63,435,61,447,59,459,58,470,57,481,57,491,57,502,58,511,59,521,60,531,62,539,64,549,67,559,70,567,73,577,77,586,81,596,86,606,92,615,97,624,103,633,110,642,117,650,124,657,131,664,139,670,146,678,156,685,165,690,173,726,151,719,141,711,130,702,119,690,106,678,94,667,84,657,76,646,68,634,60,620,51,609,45,596,39,580,33,565,28,549,23,534,20,521,18,507,16,492,15,480,14,468,14,456,15,444,16,431,18,416,21,402,25,387,29,374,34,360,40,347,46,336,52,323,60,312,67,301,75,290,84,280,93,268,105,257,117,244,134,236,146" shape="poly">
+                    <area target="_self" alt="Feeling Center" title="Feeling Center" href="#feeling-card" coords="487,594,485,552,496,551,508,550,518,549,528,547,539,544,550,541,561,538,571,534,582,529,591,524,600,519,609,514,617,509,625,503,631,498,639,492,647,485,655,477,661,470,669,461,677,451,683,442,688,434,695,423,701,412,706,401,710,391,714,380,717,369,720,358,722,347,724,335,725,323,725,311,725,297,724,284,723,271,721,259,719,247,716,235,712,224,708,212,703,200,698,190,691,179,728,157,734,168,741,183,748,199,753,214,758,230,762,248,764,261,766,279,767,297,767,315,765,336,763,354,759,371,754,389,748,408,740,425,731,444,720,462,711,476,699,490,688,503,677,514,665,525,651,536,637,546,624,554,608,563,591,571,573,578,554,584,536,589,518,592,504,593" shape="poly">
+                    <area target="_self" alt="Thinking Center" title="Thinking Center" href="#thinking-card" coords="222,170,258,190,254,199,249,209,245,219,241,230,238,240,236,250,234,260,232,271,231,283,230,294,230,305,230,316,230,327,231,337,233,348,236,359,239,370,242,381,245,391,248,401,252,410,257,420,262,428,267,437,273,446,279,455,286,463,293,471,300,479,307,486,315,494,323,501,331,507,339,513,347,518,355,523,364,528,374,533,384,537,394,541,404,544,414,547,425,550,435,552,447,554,458,555,468,556,479,556,479,598,464,597,443,595,427,593,405,588,387,583,367,576,350,568,334,559,317,549,301,537,285,524,271,511,257,495,244,479,233,463,223,445,210,421,202,399,195,375,191,354,188,330,187,310,188,288,189,270,193,252,197,233,202,214,210,193" shape="poly">
+                    <area target="_self" alt="The Investigator" title="The Investigator" href="#type5" coords="379,438,335,496,343,501,352,507,362,513,372,519,381,523,393,528,404,532,418,536,432,539,445,542,458,543,469,544,479,544,479,471,468,471,454,469,443,467,429,464,415,459,404,453,391,445" shape="poly">
+                    <area target="_self" alt="The Individualist" title="The Individualist" href="#type4" coords="487,471,490,543,502,543,516,541,529,539,542,536,556,532,568,527,579,522,592,516,602,510,612,504,623,496,633,489,585,432,576,440,567,446,557,452,547,457,536,462,524,465,512,468,499,470" shape="poly">
+                    <area target="_self" alt="The Achiever" title="The Achiever" href="#type3" coords="591,429,641,483,649,474,656,466,663,458,670,449,677,440,683,430,689,420,694,410,698,400,702,389,706,379,709,368,711,358,713,347,641,335,639,346,636,357,633,366,629,375,625,384,620,393,613,403,606,412,598,421" shape="poly">
+                    <area target="_self" alt="The Helper" title="The Helper" href="#type2" coords="643,327,715,337,716,322,717,305,716,289,715,275,713,261,710,248,706,235,701,220,695,207,690,196,684,187,621,224,627,232,632,244,637,257,640,269,642,281,643,291,644,301,644,313" shape="poly">
+                    <area target="_self" alt="The Reformer" title="The Reformer" href="#type1" coords="619,217,679,177,669,163,658,148,647,136,634,125,620,114,609,106,598,99,584,92,572,86,561,82,534,150,545,155,556,160,567,167,577,173,587,181,596,189,605,200,612,209" shape="poly">
+                    <area target="_self" alt="The Challenger" title="The Challenger" href="#type8" coords="335,223,272,187,281,174,290,162,300,150,311,138,321,128,333,118,345,109,356,102,367,96,378,90,387,86,416,154,404,159,393,165,381,173,372,181,363,189,355,198,346,209" shape="poly">
+                    <area target="_self" alt="The Peacemaker" title="The Peacemaker" href="#type9" coords="396,82,422,151,431,148,441,145,450,143,460,142,471,141,480,141,491,141,501,142,510,144,519,146,529,149,550,78,533,74,514,71,498,69,482,68,464,68,445,70,428,73,409,78" shape="poly">
+                    <area target="_self" alt="The Enthusiast" title="The Enthusiast" href="#type7" coords="267,197,332,230,327,242,323,253,319,265,316,276,314,286,314,296,314,306,315,316,315,326,316,335,244,348,242,327,241,312,241,294,242,280,245,262,248,248,252,233,258,217" shape="poly">
+                    <area target="_self" alt="The Loyalist" title="The Loyalist" href="#type6" coords="318,342,247,359,250,372,254,385,259,398,267,413,273,425,280,436,287,446,294,456,304,468,314,479,326,489,374,432,365,425,357,418,350,410,343,401,337,392,331,381,326,369,321,354" shape="poly">
+                </map>
+            </div>
+
+            <div class="enneagram-heading">
+                <h1>ENNEAGRAM JOURNEY HUB</h1>
+                <p class="enneagram-sub">Discover your personality type and unlock deeper self-awareness</p>
+                <p class="enneagram-hint">Click on any section of the circle to learn more</p>
+                <a href="#types-section" class="btn-main">Explore the 9 Types</a>
+            </div>
+        </div>
+
+        <!-- CORE CENTER CHECK-IN -->
+        <div class="centers-area">
+            <h2 class="section-heading">Core Center Check-in</h2>
+
+            <div class="centers-row">
+
+                <div class="center-card acting-card" id="acting-card">
+                    <img src="actingIcon.png" alt="Acting Center Icon" class="center-icon">
+                    <h3>ACTING CENTER</h3>
+                    <p class="center-types">Types 8, 9, 1</p>
+                    <p class="center-desc">The Body Center, also known as the Instinctual Center, includes Enneagram Types 8, 9, and 1. People in this group rely on their instincts or gut feelings when making decisions. They often respond quickly based on what feels right to them rather than overthinking.</p>
+                    <p class="center-desc">These types are focused on action, personal security, control, and belonging. They want to feel safe in their environment and try to do what they believe is the right and fair thing. Their instincts help guide their actions and responses to situations around them.</p>
+                    <ul class="center-list">
+                        <li><a href="#type8">Type 8 – The Challenger</a></li>
+                        <li><a href="#type9">Type 9 – The Peacemaker</a></li>
+                        <li><a href="#type1">Type 1 – The Reformer</a></li>
+                    </ul>
+                </div>
+
+                <div class="center-card feeling-card" id="feeling-card">
+                    <img src="feelingIcon.png" alt="Feeling Center Icon" class="center-icon">
+                    <h3>FEELING CENTER</h3>
+                    <p class="center-types">Types 2, 3, 4</p>
+                    <p class="center-desc">The Heart Center, also known as the Emotional Center, includes Enneagram Types 2, 3, and 4. People in this group rely on their feelings and emotions to understand the world and connect with others.</p>
+                    <p class="center-desc">They focus on relationships, love, approval, and recognition. These types often try to create a positive self-image and want to feel appreciated and valued by the people around them.</p>
+                    <ul class="center-list">
+                        <li><a href="#type2">Type 2 – The Helper</a></li>
+                        <li><a href="#type3">Type 3 – The Achiever</a></li>
+                        <li><a href="#type4">Type 4 – The Individualist</a></li>
+                    </ul>
+                </div>
+
+                <div class="center-card thinking-card" id="thinking-card">
+                    <img src="thinkingIcon.png" alt="Thinking Center Icon" class="center-icon">
+                    <h3>THINKING CENTER</h3>
+                    <p class="center-types">Types 5, 6, 7</p>
+                    <p class="center-desc">The Head Center, also called the Intellectual Center, includes Enneagram Types 5, 6, and 7. People in this group mainly rely on thinking and analyzing before making decisions. They like to gather information, understand situations, and plan carefully.</p>
+                    <p class="center-desc">Their focus is on creating certainty and safety. They often think about possible outcomes and different options before taking action, which helps them feel more prepared and secure.</p>
+                    <ul class="center-list">
+                        <li><a href="#type5">Type 5 – The Investigator</a></li>
+                        <li><a href="#type6">Type 6 – The Loyalist</a></li>
+                        <li><a href="#type7">Type 7 – The Enthusiast</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- TYPES SECTION -->
+    <section id="types-section">
+        <div class="types-inner">
+            <h2 class="section-heading light-heading">The Nine Types</h2>
+            <p class="section-sub">Click the arrows to scroll through each type.</p>
+
+            <!-- All Types Together Image -->
+            <div class="types-together-wrap">
+                <img src="TypesTogether.png" alt="All Nine Enneagram Types Together" class="types-together-img">
+            </div>
+
+            <!-- Carousel -->
+            <div class="carousel-area">
+                <button class="carousel-btn" id="prev-btn" onclick="moveCarousel(-1)">&#8249;</button>
+
+                <div class="carousel-track" id="carousel-track">
+
+                    <div class="type-card" id="type1">
+                        <div class="type-num-badge badge-1">1</div>
+                        <img src="type1character.png" alt="Type 1 - The Reformer" class="type-img">
+                        <h3>The Reformer</h3>
+                        <p class="type-tagline">Principled &middot; Purposeful &middot; Self-Controlled &middot; Perfectionistic</p>
+                        <div class="type-details">
+                            <p>Enneagram Type One, often referred to as "The Reformer" or "The Perfectionist." Driven by a deep seated fear of being corrupt or defective, these individuals strive for a life of absolute integrity and moral consistency. They are honest, hard workers who always try to do the right thing. Because they want everything to be perfect, they can sometimes be a bit strict or bossy. Basically, they just have high standards and a strong heart for being good people.</p>
+                            <ul>
+                                <li><strong>Core Fear:</strong> Being corrupt or defective</li>
+                                <li><strong>Core Desire:</strong> To be good and have integrity</li>
+                                <li><strong>Center:</strong> Acting (Body)</li>
+                                <li><strong>Wings:</strong> 9w1 or 1w2</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-card" id="type2">
+                        <div class="type-num-badge badge-2">2</div>
+                        <img src="type2character.png" alt="Type 2 - The Helper" class="type-img">
+                        <h3>The Helper</h3>
+                        <p class="type-tagline">Generous &middot; Demonstrative &middot; People-Pleasing &middot; Possessive</p>
+                        <div class="type-details">
+                            <p>Enneagram Type Two, often called "The Helper." These are some of the most genuine and caring people you'll meet, always ready to listen and give their all to a relationship. They have a huge heart and a strong desire to be loved, but because they focus so much on making others happy, they often forget to take care of themselves. While their generosity is amazing, they can sometimes come across as a bit needy because they put so much energy into staying connected with the people they love.</p>
+                            <ul>
+                                <li><strong>Core Fear:</strong> Being unloved or unwanted</li>
+                                <li><strong>Core Desire:</strong> To feel loved and appreciated</li>
+                                <li><strong>Center:</strong> Feeling (Heart)</li>
+                                <li><strong>Wings:</strong> 1w2 or 2w3</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-card" id="type3">
+                        <div class="type-num-badge badge-3">3</div>
+                        <img src="type3character.png" alt="Type 3 - The Achiever" class="type-img">
+                        <h3>The Achiever</h3>
+                        <p class="type-tagline">Adaptable &middot; Excelling &middot; Driven &middot; Image-Conscious</p>
+                        <div class="type-details">
+                            <p>Enneagram Type Three, or "The Achiever", is all about success and getting things done. They are hardworking, adaptable, and have a natural drive to be the best at whatever they do. Because they care a lot about their image and being seen as successful, they can sometimes turn into workaholics or focus more on their goals than their feelings. Still, they are great communicators who know how to connect with people to reach the finish line.</p>
+                            <ul>
+                                <li><strong>Core Fear:</strong> Being worthless or a failure</li>
+                                <li><strong>Core Desire:</strong> To feel valuable and worthwhile</li>
+                                <li><strong>Center:</strong> Feeling (Heart)</li>
+                                <li><strong>Wings:</strong> 2w3 or 3w4</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-card" id="type4">
+                        <div class="type-num-badge badge-4">4</div>
+                        <img src="type4character.png" alt="Type 4 - The Individualist" class="type-img">
+                        <h3>The Individualist</h3>
+                        <p class="type-tagline">Expressive &middot; Dramatic &middot; Self-Absorbed &middot; Temperamental</p>
+                        <div class="type-details">
+                            <p>Enneagram Type Four, also called "The Individualist," is very creative and has a strong sense of who they are. They love to express themselves and often think ahead of the curve. Even so, because they focus so much on their own feelings and identity, they can sometimes be moody or a bit self-centered.</p>
+                            <ul>
+                                <li><strong>Core Fear:</strong> Having no identity or significance</li>
+                                <li><strong>Core Desire:</strong> To find themselves and their significance</li>
+                                <li><strong>Center:</strong> Feeling (Heart)</li>
+                                <li><strong>Wings:</strong> 3w4 or 4w5</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-card" id="type5">
+                        <div class="type-num-badge badge-5">5</div>
+                        <img src="type5character.png" alt="Type 5 - The Investigator" class="type-img">
+                        <h3>The Investigator</h3>
+                        <p class="type-tagline">Perceptive &middot; Innovative &middot; Secretive &middot; Isolated</p>
+                        <div class="type-details">
+                            <p>"The Investigator," is very smart and likes to think deeply about how things work. They are quiet, logical, and notice things that others might miss. Still, because they prefer to stay objective and thoughtful, they can sometimes seem a bit cold or detached from their feelings.</p>
+                            <ul>
+                                <li><strong>Core Fear:</strong> Being helpless, useless, or incapable</li>
+                                <li><strong>Core Desire:</strong> To be capable and competent</li>
+                                <li><strong>Center:</strong> Thinking (Head)</li>
+                                <li><strong>Wings:</strong> 4w5 or 5w6</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-card" id="type6">
+                        <div class="type-num-badge badge-6">6</div>
+                        <img src="type6character.png" alt="Type 6 - The Loyalist" class="type-img">
+                        <h3>The Loyalist</h3>
+                        <p class="type-tagline">Engaging &middot; Responsible &middot; Anxious &middot; Suspicious</p>
+                        <div class="type-details">
+                            <p>Enneagram Type Six, often called "The Loyalist," is a very responsible person who stays committed to the people and groups they care about. They are the kind of friends who build long-lasting relationships because they are so trustworthy and devoted to those they love. You can always count on them to be there when things get tough. However, because they want to feel safe and prepared, they tend to worry quite a bit and often dwell on the negative.</p>
+                            <ul>
+                                <li><strong>Core Fear:</strong> Being without support or guidance</li>
+                                <li><strong>Core Desire:</strong> To have security and steady support</li>
+                                <li><strong>Center:</strong> Thinking (Head)</li>
+                                <li><strong>Wings:</strong> 5w6 or 6w7</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-card" id="type7">
+                        <div class="type-num-badge badge-7">7</div>
+                        <img src="type7character.png" alt="Type 7 - The Enthusiast" class="type-img">
+                        <h3>The Enthusiast</h3>
+                        <p class="type-tagline">Spontaneous &middot; Versatile &middot; Acquisitive &middot; Scattered</p>
+                        <div class="type-details">
+                            <p>Enneagram Type Seven, or "The Enthusiast," is full of energy and loves to have fun. They are very social people who enjoy meeting new friends and are always ready for a new adventure. Because they think fast and can do many different things, they usually keep a positive attitude even when life gets tough. However, they can get distracted easily and find it hard to stay focused on just one thing because they are always looking for the next exciting plan.</p>
+                            <ul>
+                                <li><strong>Core Fear:</strong> Being deprived or trapped in pain</li>
+                                <li><strong>Core Desire:</strong> To be satisfied and content</li>
+                                <li><strong>Center:</strong> Thinking (Head)</li>
+                                <li><strong>Wings:</strong> 6w7 or 7w8</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-card" id="type8">
+                        <div class="type-num-badge badge-8">8</div>
+                        <img src="type8character.png" alt="Type 8 - The Challenger" class="type-img">
+                        <h3>The Challenger</h3>
+                        <p class="type-tagline">Self-Confident &middot; Decisive &middot; Willful &middot; Confrontational</p>
+                        <div class="type-details">
+                            <p>Enneagram Type Eight, often called "The Challenger," is a bold and strong person who is not afraid to say what they think. They are very sure of themselves and good at making fast choices, which helps them become great leaders. Because they love to take action and stay in control, they usually get things done quickly. Since they are so powerful and direct, other people might sometimes see them as bossy or a bit too aggressive.</p>
+                            <ul>
+                                <li><strong>Core Fear:</strong> Being controlled or harmed by others</li>
+                                <li><strong>Core Desire:</strong> To protect themselves and be in control</li>
+                                <li><strong>Center:</strong> Acting (Body)</li>
+                                <li><strong>Wings:</strong> 7w8 or 8w9</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="type-card" id="type9">
+                        <div class="type-num-badge badge-9">9</div>
+                        <img src="type9character.png" alt="Type 9 - The Peacemaker" class="type-img">
+                        <h3>The Peacemaker</h3>
+                        <p class="type-tagline">Receptive &middot; Reassuring &middot; Complacent &middot; Resigned</p>
+                        <div class="type-details">
+                            <p>Enneagram Type Nine, known as "The Peacemaker," is very agreeable and easy-going. They are the kind of people who love to bring everyone together and promote harmony in groups. Because they dislike disagreements so much, they will do almost anything to avoid a fight. However, because they focus so much on keeping things calm, they may ignore their own wants and needs just to make sure everyone else is happy.</p>
+                            <ul>
+                                <li><strong>Core Fear:</strong> Loss and separation from others</li>
+                                <li><strong>Core Desire:</strong> To have inner peace and harmony</li>
+                                <li><strong>Center:</strong> Acting (Body)</li>
+                                <li><strong>Wings:</strong> 8w9 or 9w1</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-btn" id="next-btn" onclick="moveCarousel(1)">&#8250;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CELEBRITIES SECTION -->
+    <section id="celebrities-section">
+        <div class="celeb-inner">
+            <h2 class="section-heading">Famous Enneagram Types</h2>
+            <p class="section-sub dark-sub">Real people, real types — see who shares your personality.</p>
+
+            <div class="celeb-row">
+
+                <div class="celeb-card">
+                    <img src="millie.png" alt="Millie Bobby Brown" class="celeb-img">
+                    <div class="celeb-info">
+                        <span class="celeb-badge badge-2">Type 1</span>
+                        <h4>Millie Bobby Brown</h4>
+                        <p>The Reformer — Mature beyond her years, Millie channels focus, discipline, and high standards into her craft. Her strong sense of right and wrong shapes both her art and her advocacy.</p>
+                    </div>
+                </div>
+
+                <div class="celeb-card">
+                    <img src="anne.png" alt="Anne Hathaway" class="celeb-img">
+                    <div class="celeb-info">
+                        <span class="celeb-badge badge-2">Type 2</span>
+                        <h4>Anne Hathaway</h4>
+                        <p>The Helper — Gracious, empathetic, and attuned to others’ emotions, Anne radiates warmth and sincerity. Her compassion drives her artistry, blending heart, depth, and genuine care in everything she does.</p>
+                    </div>
+                </div>
+
+                <div class="celeb-card">
+                    <img src="taylor.png" alt="Taylor Swift" class="celeb-img">
+                    <div class="celeb-info">
+                        <span class="celeb-badge badge-3">Type 3</span>
+                        <h4>Taylor Swift</h4>
+                        <p>The Achiever — Poised, purposeful, and fiercely self-driven, Taylor embodies evolution in motion. Her artistry and ambition go hand in hand, turning reinvention into both a strategy and a story.</p>
+                    </div>
+                </div>
+
+                <div class="celeb-card">
+                    <img src="ariana.png" alt="Ariana Grande" class="celeb-img">
+                    <div class="celeb-info">
+                        <span class="celeb-badge badge-4">Type 4</span>
+                        <h4>Ariana Grande</h4>
+                        <p>The Individualist — Expressive and deeply emotional, Ariana pours her inner world into her art. Her sensitivity and intensity reveal a soul that feels deeply and transforms pain into beauty.</p>
+                    </div>
+                </div>
+
+                <div class="celeb-card">
+                    <img src="stewart.png" alt="Kirsten Stewart" class="celeb-img">
+                    <div class="celeb-info">
+                        <span class="celeb-badge badge-6">Type 5</span>
+                        <h4>Kristen Stewart</h4>
+                        <p>The investigator — Reserved, cerebral, and introspective, Kristen moves through life with quiet depth. Her minimalist expression masks a mind constantly observing and deconstructing.</p>
+                    </div>
+                </div>
+
+                <div class="celeb-card">
+                    <img src="kristen.png" alt="Kristen Bell" class="celeb-img">
+                    <div class="celeb-info">
+                        <span class="celeb-badge badge-7">Type 6</span>
+                        <h4>Kristen Bell</h4>
+                        <p>The Loyalist — Genuine, responsible, and emotionally grounded, Kristen radiates warmth with a touch of caution. Her honesty and humor reflect the 6’s instinct to bring safety through connection.</p>
+                    </div>
+                </div>
+
+                <div class="celeb-card">
+                    <img src="margot.png" alt="Margot Robbie" class="celeb-img">
+                    <div class="celeb-info">
+                        <span class="celeb-badge badge-7">Type 7</span>
+                        <h4>Margot Robbie</h4>
+                        <p>The Enthusiast — Energetic, spontaneous, and always taking on exciting new creative challenges.</p>
+                    </div>
+                </div>
+
+                <div class="celeb-card">
+                    <img src="rihanna.png" alt="Rihanna" class="celeb-img">
+                    <div class="celeb-info">
+                        <span class="celeb-badge badge-8">Type 8</span>
+                        <h4>Rihanna</h4>
+                        <p>The Challenger — Bold, direct, and fiercely independent, Rihanna built an empire on her own terms.</p>
+                    </div>
+                </div>
+
+                <div class="celeb-card">
+                    <img src="zendaya.png" alt="Zendaya" class="celeb-img">
+                    <div class="celeb-info">
+                        <span class="celeb-badge badge-3">Type 9</span>
+                        <h4>Zendaya</h4>
+                        <p>The Peacemaker — Highly adaptable and driven, Zendaya has excelled across acting, fashion, and music with grace.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <p class="footer-nav">
+                <a href="#enneagram-section">Enneagram</a> &nbsp;|&nbsp;
+                <a href="#types-section">Types</a> &nbsp;|&nbsp;
+                <a href="#celebrities-section">Celebrities</a>
+            </p>
+            <p class="footer-credit">Character illustrations by <strong>@lumiistra</strong></p>
+            <p class="footer-names">Coronacion, Adriano &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        var currentIndex = 0;
+        var cards = document.querySelectorAll('#carousel-track .type-card');
+        var total = cards.length;
+
+        function updateCarousel() {
+            var track = document.getElementById('carousel-track');
+            var i;
+            for (i = 0; i < total; i++) {
+                cards[i].className = 'type-card';
+                var diff = i - currentIndex;
+                if (diff === 0) {
+                    cards[i].className = 'type-card active-card';
+                } else if (Math.abs(diff) === 1) {
+                    cards[i].className = 'type-card side-card';
+                } else {
+                    cards[i].className = 'type-card far-card';
+                }
+            }
+            var activeCard = cards[currentIndex];
+            var cardCenter = activeCard.offsetLeft - (track.clientWidth / 2) + (activeCard.clientWidth / 2);
+            track.scrollTo({ left: cardCenter, behavior: 'smooth' });
+        }
+
+        function moveCarousel(dir) {
+            currentIndex = currentIndex + dir;
+            if (currentIndex < 0) { currentIndex = 0; }
+            if (currentIndex > total - 1) { currentIndex = total - 1; }
+            updateCarousel();
+        }
+
+        updateCarousel();
+
+        // Smooth scroll for anchor links
+        var anchors = document.querySelectorAll('a[href^="#"]');
+        var i;
+        for (i = 0; i < anchors.length; i++) {
+            anchors[i].addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+
+        // Highlight active nav on scroll
+        var sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', function() {
+            var scrollPos = window.scrollY + 120;
+            var j;
+            for (j = 0; j < sections.length; j++) {
+                if (scrollPos >= sections[j].offsetTop && scrollPos < sections[j].offsetTop + sections[j].offsetHeight) {
+                    var navBtns = document.querySelectorAll('.nav-btn');
+                    var k;
+                    for (k = 0; k < navBtns.length; k++) {
+                        navBtns[k].className = 'nav-btn';
+                    }
+                    var activeLink = document.querySelector('.nav-btn[href="#' + sections[j].id + '"]');
+                    if (activeLink) { activeLink.className = 'nav-btn active'; }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
